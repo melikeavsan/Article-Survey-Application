@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Makale Anketi Uygulaması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background-color: #FF66CC;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .article {
+            margin: 20px;
+            padding: 20px;
+            background-color: pink;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .survey {
+            margin: 30px;
+            padding: 30px;
+            background-color: pink;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .results-link {
+            margin: 30px;
+            text-align: center;
+        }
+
+        .results-link a {
+            color: #990000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #FF66CC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Hoşgeldiniz!</h1>
+        <p>Bu makale anketi örneği uygulamasıdır.</p>
+    </div>
+
+    <div class="article">
+        <h2>Makale Başlığı</h2>
+        <p>Burada makalenin içeriği yer alacak. Bu alan, kullanıcıların okuyabileceği bir makaleyi temsil eder.</p>
+    </div>
+
+    <div class="survey">
+        <h2>Anket</h2>
+        <form action="process.php" method="post">
+            <label for="question1">Bu makale hakkında ne düşünüyorsunuz?</label>
+            <select name="response" id="question1">
+                <option value="çok iyi">Seçiniz</option>
+                <option value="çok iyi">Çok İyi</option>
+                <option value="iyi">İyi</option>
+                <option value="orta">Orta</option>
+                <option value="kötü">Kötü</option>
+                <option value="çok kötü">Çok Kötü</option>
+            </select>
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+
+    <div class="results-link">
+        <a href="process.php">Anket Sonuçlarını Görüntüle</a>
+    </div>
+
+    <script>
+        // Anket gönderildiğinde kullanıcıya mesaj göster
+        document.querySelector("form").addEventListener("submit", function() {
+            alert("Anketiniz gönderildi! Teşekkür ederiz.");
+        });
+    </script>
+</body>
+</html>

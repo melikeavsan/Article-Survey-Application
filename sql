@@ -1,0 +1,4 @@
+CREATE TABLE anket_sonuclari (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    cevap VARCHAR(50) NOT NULL
+);
